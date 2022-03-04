@@ -1,0 +1,18 @@
+﻿@model List<EntityLayer.User>
+@{
+    ViewData["Title"] = "User Page";
+}
+
+<ul class="list-group">
+    @if (@Model.Count == 0)
+    {
+        <li class="list-group-item">There's no any user</li>
+    }
+    else
+    {
+        @foreach (var item in @Model)
+        {
+            <li class="list-group-item">@item.FirstName @item.LastName - @item.Address - @item.status </li>
+        }
+    }
+</ul>
